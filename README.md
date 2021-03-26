@@ -5,13 +5,21 @@ viewWillLayoutSubviews вызывается до layoutSubviews корневой
 ## Начальный лог обновления лейаута, когда вьюхи добавляются в иерархию UIWindow:
 
 viewWillLayoutSubviews()
+
 layoutSubviews() <UIKitLayout.RootView: 0x7f9864e04dc0; frame = (0 0; 667 375); layer = <CALayer: 0x600002086060>>
+
 viewDidLayoutSubviews()
+
 layoutSubviews() <UIKitLayout.ChildOfRootView: 0x7f9864e051c0; frame = (0 0; 667 375); layer = <CALayer: 0x600002086040>>
+
 viewWillLayoutSubviews()
+
 layoutSubviews() <UIKitLayout.RootView: 0x7f9864e04dc0; frame = (0 0; 667 375); layer = <CALayer: 0x600002086060>>
+
 viewDidLayoutSubviews()
+
 layoutSubviews() <UIKitLayout.ChildOfRootView: 0x7f9864e051c0; frame = (0 0; 667 375); layer = <CALayer: 0x600002086040>>
+
 layoutSubviews() <UIKitLayout.ChildOfChildOfRootView: 0x7f9864e05330; frame = (0 0; 667 375); layer = <CALayer: 0x600002086000>>
 
 ## Лог обновления лейаута, когда делаем поворот экрана, меняются размеры вьюх, соответсвенно лейаут будет пересчитываться полностью у всего дерева. Отличие от первого примера только в том, что происходит все внутри транзакции и каждой вью присвоена анимация.
